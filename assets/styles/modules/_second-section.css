@@ -1,0 +1,62 @@
+.second-section{
+    min-width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(-180deg, rgba(213,226,255,1), rgba(255,255,255,1));
+
+    &__content{
+        /* border: 1px solid red; */
+        padding: 0 15px;
+
+        @mixin atLarge{
+            padding-left: 150px;
+        }
+
+        &-title{
+            font-family: Helvetica;
+            font-size: 20px;
+            color: #121C25;
+            letter-spacing: 0;
+            line-height: 30px;
+
+            @mixin atMedium{
+                font-size: 25px;
+                line-height: 30px;
+                font-weight: 400;
+            }
+
+            @mixin atLarge{
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+
+        &-para{
+            font-family: Roboto-Regular;
+            font-size: 16px;
+            color: #121C25;
+            letter-spacing: 0;
+            line-height: 16px;
+
+            @mixin atMedium{
+                line-height: 25px;
+            }
+            @mixin atLarge{
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+
+    }
+
+    &--content{
+        @mixin atLarge{
+            padding-left: 50px;
+            padding-right: 100px;
+        }
+    }
+
+    &__img{
+        /* border: 1px solid black; */
+        height: 450px;
+    }
+}

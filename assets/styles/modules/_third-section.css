@@ -1,0 +1,95 @@
+.third-section{
+    min-width: 100%;
+    /* min-height: 100vh; */
+    background: #F4F4F4;
+    position: relative;
+
+    &__title{
+        font-family: Helvetica;
+        font-size: 40px;
+        color: #121C25;
+        letter-spacing: 0;
+    }
+
+    &__para{
+        font-family: SourceSansPro-Regular;
+        font-size: 16px;
+        color: #61686D;
+        letter-spacing: 0;
+        line-height: 28px;
+    }
+
+    &__slider{
+        width: 380px;
+        overflow: hidden;
+        @mixin atMedium{
+            width: 705px;
+        }
+        @mixin atLarge{
+            width: 1110px;
+        }
+    }
+
+    #slide{
+        display: flex;
+        width: 100%;
+        height: 400px;
+    }
+    &__img{
+        position: relative;
+        /* border: 1px solid red; */
+        img{
+            width: 350px;
+            height: 400px;
+            padding: 0 5px;
+
+            @mixin atMedium{
+                width: 350px;
+                height: 400px;
+            }
+
+            @mixin atLarge{
+                width: 370px;
+                height: 400px;
+            }
+        }
+    }
+
+    &__img-desc{
+        position: absolute;
+        bottom: 0;
+        left: 5px;
+        right: 5px;
+        opacity: 0.9;
+        background: #ffffff;
+        width: 340px;
+        padding: 0 15px;
+        text-align: center;
+        @mixin atMedium{
+            width: 340px;
+        }
+
+        @mixin atLarge{
+            width: 360px;
+        }
+    }
+}
+
+#prevBtn{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 100;
+    @mixin atMedium{
+        left: 6.5%;
+    }
+}
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    font-size: 20px;
+    cursor: pointer;
+}

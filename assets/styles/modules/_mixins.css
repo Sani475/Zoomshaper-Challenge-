@@ -1,0 +1,23 @@
+@define-mixin cloudPosition $top,$right {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+@define-mixin atLarge{
+    @media (min-width: 1281px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atMedium{
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @mixin-content; 
+    }
+}
+
+@define-mixin atPhones{
+    @media (min-width: 320px) and (max-width: 480px){
+        @mixin-content;
+    }
+}

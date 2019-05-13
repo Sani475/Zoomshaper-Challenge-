@@ -1,0 +1,104 @@
+.first-section{
+    max-width: 100vw;
+    /* min-height: 100vh; */
+    background: linear-gradient(-180deg, rgba(213,226,255,1), rgba(255,255,255,1));
+
+    &__header{
+        font-family: 'Helvetica';
+        color: #121C25;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 30px;
+
+        &-content{
+            margin-bottom: 60px;
+            font-size: 20px;
+
+            @mixin atLarge{
+                font-size: 30px;
+                line-height: 40px;
+            }
+
+            @mixin atMedium{
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+        &-timer{
+            display: flex;
+            justify-content: center;
+            div{
+                margin: 20px;
+            }
+            p{
+                font-size: 20px;
+                 margin: 0 20px;
+
+                 @mixin atMedium{
+                     font-size: 30px;
+                     line-height: 30px;
+                 }
+
+                 @mixin atLarge{
+                     font-size: 30px;
+                      line-height: 40px;
+                 }
+
+                span{
+                    font-size: 16px;
+                    font-weight: 400;
+
+                    @mixin atMedium{
+                        font-size: 25px;
+                    }
+
+                    @mixin atLarge{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+
+        &-cloud1{
+            @mixin cloudPosition 18%,-150px;
+            animation: wind 30s linear 5s infinite reverse;
+        }
+        &-cloud2{
+            @mixin cloudPosition 0,-150px;
+            animation: wind 30s linear infinite reverse;
+        }
+        &-cloud3{
+            @mixin cloudPosition 30%,-150px;
+            animation: wind 30s linear 12s infinite reverse;
+            @mixin atMedium{
+                @mixin cloudPosition 30px,-150px;
+            }
+        }
+        &-cloud4{
+            @mixin cloudPosition 10%,-150px;
+            animation: wind 30s linear 8s infinite reverse;
+
+        }
+        &-cloud5{
+            @mixin cloudPosition 8%,-150px;
+            animation: wind 30s linear 2s infinite reverse;
+        }
+    }
+
+    &__footer{
+
+
+    }
+}
+
+
+
+@keyframes wind{
+    from{
+        left: -100px;
+
+    }
+    to{
+        left: 100%;
+    }
+}
